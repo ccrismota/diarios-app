@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "diario-viagens-a160f": {
+      "hosting": {
+        "diarios-app": [
+          "diario-viagens-a160f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "diario-viagens-a160f"
+  }
+}
