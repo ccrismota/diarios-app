@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { DiariosModule } from './diarios/diarios.module';
+import { NgChartsModule } from 'ng2-charts';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -27,9 +30,12 @@ import { HotToastModule } from '@ngneat/hot-toast';
     BrowserAnimationsModule,
     CoreModule,
     AuthModule,
+    DiariosModule,
     HotToastModule.forRoot({
       position: 'bottom-center', // posição em que sserá apresentadoo na tela
-    })
+    }),
+    NgChartsModule,
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent] //Primeiro componente a ser exibido

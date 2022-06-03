@@ -9,10 +9,10 @@ export interface Diario {
   data: Date, //data da viagem relizada
   imagem?: string,//link da imagem
   // serão preenchidos programaticamente
-  createdAt: string, //guarda quando o diario foi criado
+  createdAt: Date, //guarda quando o diario foi criado
   usuarioId?: string,
   usuarioNick: string,
-  usuarioNome: string;
+  usuarioName: string;
 }
 
 export const DiarioConverter: Converter<Diario> = {
@@ -22,8 +22,8 @@ export const DiarioConverter: Converter<Diario> = {
     const obj = snapshot.data(options)!;
     return {
       ...obj,// spread => adiciona todas as propriedades do obj
-      data: obj['data']?.data(),
-      createdAt: obj['createdAt']?.data(),
+      data: obj['data']?.toDate(),
+      createdAt: obj['createdAt']?.toDate(),
     } as Diario;
   },
 }

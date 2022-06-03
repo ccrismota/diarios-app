@@ -3,10 +3,10 @@
     <h2>Recuperação de senha</h2>
     <span>Um email será emviado para você com o processo de redefinir senha</span>
     <mat-icon mat-Pefix>email</mat-icon>
-    <mat-form-field appearence="'fill">
+    <mat-form-field appearence="fill">
       <mat-label>Email</mat-label>
       <input matInput placeholder="Seu email" type="email" name="email" [(ngModel)]="email" required/>
     </mat-form-field>
-    <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="onSubmit()">Enviar</button>
+    <button mat-raised-button color="primary" [disabled]="form.invalid">Enviar</button>
   </form>
 </div>
